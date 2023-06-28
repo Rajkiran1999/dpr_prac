@@ -1,0 +1,18 @@
+TEMPLATE_SIZE = 64
+HOG_CONFIG = {"orientations": 8, "pixels_per_cell": (8, 8), "cells_per_block": (4, 4)}
+
+get_positive_features.template_size = %TEMPLATE_SIZE
+get_positive_features.hog_config = %HOG_CONFIG
+
+get_negative_features.template_size = %TEMPLATE_SIZE
+get_negative_features.hog_config = %HOG_CONFIG
+get_negative_features.samples_per_scale = 2
+get_negative_features.scale = 0.8
+
+FaceDetector.template_size = %TEMPLATE_SIZE
+FaceDetector.hog_config = %HOG_CONFIG
+FaceDetector.confidence_threshold = 1
+FaceDetector.iou_threshold = 0.4
+FaceDetector.step_size = 8
+FaceDetector.pyramid_scale = 0.9
+FaceDetector.regularization_param = 1
