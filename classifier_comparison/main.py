@@ -10,8 +10,8 @@ from plot import plot_results
 
 def main(argv):
     # load dataset
-    x_train, y_train, x_test, y_test = two_moons_dataset(1000, 0.5)
-    # x_train, y_train, x_test, y_test = four_parallel_dataset(1000, 0.5)
+    #x_train, y_train, x_test, y_test = two_moons_dataset(1000, 0.5)
+    x_train, y_train, x_test, y_test = four_parallel_dataset(1000, 0.5)
     # x_train, y_train, x_test, y_test = four_gaussian_dataset(1000, 0.5)
     # x_train, y_train, x_test, y_test = circular_dataset(1000, 0.5)
 

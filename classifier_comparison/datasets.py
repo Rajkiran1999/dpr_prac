@@ -147,8 +147,8 @@ def circular_dataset(size, training_split):
     # create circular dataset
     # TODO: Use the function make_circles to generate the data. Thereby, set shuffle to False. Then scale the data and
     #       add two-dimensional standard normal distributed noise
-    data, labels = make_circles(n_samples=size1, factor=0, noise=1, random_state=0, shuffle=False)
-    data = 4 * data
+    data, labels = make_circles(n_samples=size, noise = 0.01, factor=0,shuffle=False)
+    data = 4 * data + np.random.randn(size,2)
 
     # split dataset in train and test data
     data1 = data[:size1, :]
@@ -165,10 +165,3 @@ def circular_dataset(size, training_split):
     y_test = np.concatenate((labels1[n_train1:], labels2[n_train2:]))
 
     return x_train, y_train, x_test, y_test
-
-
-
-x_train, y_train, x_test, y_test = two_moons_dataset(1000, 0.7)
-import matplotlib.pyplot as plt
-plt.scatter(x_train, y_train)
-plt.show()
